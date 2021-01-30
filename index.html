@@ -120,7 +120,8 @@
         <!--Thank You-->
 
         <!-- JavaScript starts -->
-        <script>
+<script>
+            // first class price calculation code
             const firstClassIncrement = document.querySelector('.fa-plus');
             firstClassIncrement.addEventListener('click', function(e) {
                 formCalculation(true, 'firstClass', 150);
@@ -129,9 +130,9 @@
 
             const firstClassDecrement = document.querySelector('.fa-minus')
             firstClassDecrement.addEventListener('click', function(e) {
-                formCalculation(false, 'firstClass', 150);
-            })
-
+                    formCalculation(false, 'firstClass', 150);
+                })
+                // economy price calculation code
             const economyIncrement = document.getElementById('economyPlus')
             economyIncrement.addEventListener('click', function(e) {
                 formCalculation(true, 'economy', 100);
@@ -139,9 +140,9 @@
 
             const economyDecrement = document.getElementById('economyMinus')
             economyDecrement.addEventListener('click', function(e) {
-                formCalculation(false, 'economy', 100);
-            })
-
+                    formCalculation(false, 'economy', 100);
+                })
+                // popup management code
             const bookBtn = document.getElementById('bookBtn');
             bookBtn.addEventListener('click', function(e) {
                 document.getElementById('popup').style.display = 'block';
@@ -151,6 +152,7 @@
                 document.getElementById('popup').style.display = 'none';
             })
 
+            // inputs calculation function
             function formCalculation(increment, inputId, price) {
                 const input = document.getElementById(inputId);
                 const number = parseInt(input.value);
@@ -164,7 +166,7 @@
                 document.getElementById(inputId).value = inputSum;
                 subtotalCalculator()
             }
-
+            // total and subtotal calculation with vat
             function subtotalCalculator() {
                 const firstClassInput = document.getElementById('firstClass');
                 const firstClassQuentity = parseInt(firstClassInput.value);
